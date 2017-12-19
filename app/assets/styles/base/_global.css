@@ -1,0 +1,19 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: $mainOrange;
+}
+
+* {
+  /* allows us to have widths total 100% and still add 65px */
+  box-sizing: border-box;
+}
