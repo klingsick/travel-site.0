@@ -2,59 +2,117 @@
 
   @mixin clearfix;
 
+  &--t-padding {
+    padding-top: 80px;
+  }
 
-      &__b-margin-until-medium {
-        margin-bottom: 1rem;
-      }
+  &--gutters {
+    margin-right: -65px;
+  }
 
-      @mixin atMedium {
+  &--gutters-large {
+    margin-right: -100px;
+  }
 
-        &__b-margin-until-medium {
-        margin-bottom: 0;
-        }
+  &--gutters-small {
+    margin-right: -45px;
+  }
 
-        &__medium-4 {
-          /* 4 out of 12 columns */
-          float: left;
-          width: 33.33%;
-        }
+  &--gutters > div {
+    /* all child divs */
+    padding-right: 65px;
+  }
 
-        &__medium-4--larger {
-          width: 37%;
-        }
+  &--gutters-large > div {
+    /* all child divs */
+    padding-right: 100px;
+  }
 
-        &__medium-6 {
-          float: left;
-          width: 50%;
-        }
+  &--gutters-small > div {
+    padding-right: 45px;
+  }
 
-        &__medium-8 {
-          /* 8 of 12 columns */
-          float: left;
-          width: 66.66%;
-        }
 
-        &__medium-8--smaller {
-          width: 63%;
-        }
+  &__b-margin-until-medium {
+    margin-bottom: 1rem;
+  }
 
-      &--gutters {
-        margin-right: -65px;
-      }
+  @mixin atMedium {
 
-      &--gutters-large {
-        margin-right: -100px;
-      }
-
-      &--gutters > div {
-        /* all child divs */
-        padding-right: 65px;
-      }
-
-      &--gutters-large > div {
-        /* all child divs */
-        padding-right: 100px;
-      }
-
+    &__b-margin-until-medium {
+    margin-bottom: 0;
     }
+
+    &__medium-4 {
+      /* 4 out of 12 columns */
+      float: left;
+      width: 33.33%;
+    }
+
+    &__medium-4--larger {
+      width: 37%;
+    }
+
+    &__medium-6 {
+      float: left;
+      width: 50%;
+    }
+
+    &__medium-8 {
+      /* 8 of 12 columns */
+      float: left;
+      width: 66.66%;
+    }
+
+    &__medium-8--smaller {
+      width: 63%;
+    }
+
+  }
+
+  @mixin atLarge {
+
+    &__b-margin-until-large {
+    margin-bottom: 0;
+    }
+
+    &__large-4 {
+      /* 4 out of 12 columns */
+      float: left;
+      width: 33.33%;
+    }
+
+    &__large-4--larger {
+      width: 37%;
+    }
+
+    &__large-6 {
+      float: left;
+      width: 50%;
+    }
+
+    &__large-8 {
+      /* 8 of 12 columns */
+      float: left;
+      width: 66.66%;
+    }
+
+    &__large-8--smaller {
+      width: 63%;
+    }
+
+  }
+
+  /* Begin equal height rules */
+
+  &--equal-height-at-large {
+    @mixin atLarge {
+      display: flex;
+    }
+
+    & > div {
+      float: none;
+      display: flex;
+    }
+  }
 }
