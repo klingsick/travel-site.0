@@ -14,6 +14,5 @@ a {
 }
 
 * {
-  /* allows us to have widths total 100% and still add 65px */
   box-sizing: border-box;
 }
